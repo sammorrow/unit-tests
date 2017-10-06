@@ -1,3 +1,5 @@
+// tests reducer.js
+
 import React from 'react';
 import { createStore } from 'redux';
 import chai, { expect } from 'chai';
@@ -17,12 +19,12 @@ describe('store, reducers, action creators', () => {
       fakeStore = createStore(reducer);
   });
 
-  it('durrralnasdl', () => {
+  it('constants are constant', () => {
     expect(ADD_TASK).to.be.equal('ADD_TASK');
     expect(REMOVE_TASK).to.be.equal('REMOVE_TASK');
   });
 
-  it('adasdasldnasdlkn', () => {
+  it('action creators create actions', () => {
     const task = {
       name: 'Make this',
       complete: false
@@ -33,7 +35,7 @@ describe('store, reducers, action creators', () => {
     });
   });
 
-  it('zxcdfhdfh', () => {
+  it('they are not hard coded either', () => {
     const task = {
       name: 'This?',
       complete: false
@@ -45,13 +47,13 @@ describe('store, reducers, action creators', () => {
   });
 
 
-  it('mmmmmmmm', () => {
+  it('store has initial state', () => {
     const state = fakeStore.getState();
     expect(state.tasks).to.be.deep.equal([{name: 'test', complete: false}]);
   });
 
 
-  it('adasdasldnasdlkn', () => {
+  it('store alters with dispatched actions', () => {
     const task = {
       name: 'Make this',
       complete: false
@@ -60,7 +62,7 @@ describe('store, reducers, action creators', () => {
     expect(fakeStore.getState().tasks).to.be.deep.equal([{name: 'test', complete: false}]);
   });
 
-  it('zxc-cz-xc-x', () => {
+  it('successive actions alter store appropriately', () => {
     const task = {
       name: 'Delete this',
       complete: false
@@ -71,7 +73,7 @@ describe('store, reducers, action creators', () => {
     expect(state.tasks).to.be.deep.equal([{name: 'test', complete: false}]);
   });
 
-  it('asdasdliansdlaknsd', () => {
+  it(`you're on your own, bub. good luck!`, () => {
     const task = {
       name: 'Follow this',
       complete: true

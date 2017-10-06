@@ -1,3 +1,5 @@
+// tests user.js and products.js
+
 var Promise = require('bluebird');
 var expect = require('chai').expect;
 var { db, User, Product } = require('../../src/sequelize/');
