@@ -5,7 +5,7 @@ A sample of unit tests for each slice of the NERDS stack. Try to pass them all! 
 
 # To run:
 
-Setup a test server, preferably using postgreSQL:
+Setup a testing db, preferably using postgreSQL:
 ```
 psql
 (in psql shell): CREATE DATABASE expresstests;
