@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --require mocha-clean --compilers js:babel-register -w \"specs/**/*.spec.js\" ",
     "test-frontend": "mocha --require mocha-clean --compilers js:babel-register -w \"specs/react-redux/*.spec.js\" ",
-    "test-db": "mocha --require mocha-clean --compilers js:babel-register -w \"specs/sequelize/*.spec.js\" "
+    "test-routes": "mocha --require mocha-clean --compilers js:babel-register -w \"specs/express-sequelize/express.spec.js\" ",
+    "test-db": "mocha --require mocha-clean --compilers js:babel-register -w \"specs/express-sequelize/sequelize.spec.js\" "
   },
   "keywords": [],
   "author": "Sam Morrow",
@@ -19,6 +20,7 @@
     "chai": "^4.1.1",
     "chai-enzyme": "^0.8.0",
     "enzyme": "^2.9.1",
+    "express": "^4.16.1",
     "faker": "^4.1.0",
     "jsdom": "^11.2.0",
     "mocha": "^3.5.0",
@@ -30,6 +32,8 @@
     "redux": "^3.7.2",
     "sequelize": "^4.8.0",
     "sinon": "^3.2.1",
-    "sinon-chai": "^2.13.0"
+    "sinon-chai": "^2.13.0",
+    "supertest": "^3.0.0",
+    "supertest-as-promised": "^4.0.2"
   }
 }
